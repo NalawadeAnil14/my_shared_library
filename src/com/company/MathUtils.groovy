@@ -19,4 +19,12 @@ class MathUtils {
         }
         return a / b
     } 
+
+    int square(int a) {
+        return a * a
+    }
+
+    int cube(int a) {
+        return a * a * a
+    }
 }   
