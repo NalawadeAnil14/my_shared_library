@@ -28,4 +28,14 @@ class GitUtils {
         return steps.sh(script: 'git log -1 --pretty=%an', returnStdout: true).trim()
     }
 
-}
+
+    // Return Map with commit details
+    Map getCurrentCommitDetails() {
+        def commitDetails = [:]
+        commitDetails['hash'] = getCurrentCommitHash()
+        commitDetails['shortHash'] = getCurrentCommitShortHash()
+        commitDetails['message'] = getCurrentCommitMessage()
+        commitDetails['author'] = getCurrentCommitAuthor()
+        commitDetails['branch'] = getCurrentBranch()
+        return commitDetails
+    }
