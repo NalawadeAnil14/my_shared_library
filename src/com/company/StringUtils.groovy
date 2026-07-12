@@ -5,7 +5,7 @@ class StringUtils {
         return str.reverse()
     }
 
-    String toUppe(String str) {
+    String toUpper(String str) {
         return str.toUpperCase()
     }
 
@@ -17,7 +17,12 @@ class StringUtils {
         return str.capitalize()
     }
 
-    String count(String str){
+    int count(String str){
         return str.length()
+    }
+
+    boolean isPalindrome(String str) {
+        String reversed = str.reverse()
+        return str.equalsIgnoreCase(reversed)
     } 
 }
