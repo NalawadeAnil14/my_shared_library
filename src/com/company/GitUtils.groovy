@@ -38,4 +38,5 @@ class GitUtils {
         commitDetails['author'] = getCurrentCommitAuthor()
         commitDetails['branch'] = getCurrentBranch()
         return commitDetails
+      }
     }
